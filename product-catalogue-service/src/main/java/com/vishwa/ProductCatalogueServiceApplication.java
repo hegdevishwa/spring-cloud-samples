@@ -7,7 +7,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @EnableEurekaClient
 @SpringBootApplication
-@EnableDiscoveryClient
+
 public class ProductCatalogueServiceApplication {
 
 	public static void main(String[] args) {

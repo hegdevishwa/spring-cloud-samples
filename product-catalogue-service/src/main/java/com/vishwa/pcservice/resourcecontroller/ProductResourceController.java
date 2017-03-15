@@ -1,9 +1,8 @@
 package com.vishwa.pcservice.resourcecontroller;
 
-import javax.inject.Inject;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,9 +22,9 @@ public class ProductResourceController {
 
 	private static final Logger logger = LoggerFactory.getLogger(ProductResourceController.class);
 
-	@Inject
+	@Autowired
 	ProductService productService;
-
+	
 	@RequestMapping(value = "/products/{searchCriteria}/{searchKey}", method = RequestMethod.GET)
 	public ProductList getProducts(@RequestHeader(value = "Accept") String acceptHeader,
 			@PathVariable(value = "searchCriteria") String searchCriteria,

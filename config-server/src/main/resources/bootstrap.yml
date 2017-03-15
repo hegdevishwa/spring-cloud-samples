@@ -1,0 +1,13 @@
+spring:
+  config:
+    name: configserver
+  cloud:
+    config:
+      name: configserver
+      server:
+        git:
+          uri: https://github.com/hegdevishwa/config-repo.git
+          basedir: target/config
+          force-pull: true
+logging:
+  level: DEBUG

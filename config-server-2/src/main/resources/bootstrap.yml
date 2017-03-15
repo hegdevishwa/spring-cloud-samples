@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: config-server-2
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/hegdevishwa/config-repo.git
+          force-pull: true
+server:
+  port: 8888

@@ -2,10 +2,9 @@ package com.vishwa.pcservice.service;
 
 import java.util.List;
 
-import javax.inject.Inject;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.vishwa.pcservice.domain.dao.ProductDao;
@@ -18,12 +17,12 @@ public class ProductServiceImpl implements ProductService {
 
 	private static final Logger logger = LoggerFactory.getLogger(ProductServiceImpl.class);
 
-	@Inject
+	@Autowired
 	ProductDao productDao;
 
-	@Inject
+	@Autowired
 	PricingServiceClient pricingServiceClient;
-
+	
 	@Override
 	public List<Product> getProducts(String searchCriteria, String searchKey) {
 
